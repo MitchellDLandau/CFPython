@@ -23,7 +23,7 @@ If the user’s input is something other than the defined destinations, the foll
     destination_found = False
 
     for place in destinations:
-        if place == a:
+        if place.lower() == a.lower():
             destination_found = True
             break
     if destination_found:
