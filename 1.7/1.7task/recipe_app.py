@@ -48,7 +48,7 @@ class Recipe(Base):
             return []
         else:
             self.ingredients.split(", ")
-
+            
 Base.metadata.create_all(engine)
 
 #Definition for option 1 adding a recipe to the database. 
@@ -193,6 +193,7 @@ def option_4():
             recipe_id = (input("Enter the id of the recipe you would like to edit: "))
             if recipe_id == "menu":
                 main_menu()
+            recipe_id = int(recipe_id)  # Convert to integer
             if recipe_id not in id_list:
                 print("Invalid recipe number. Please try again.")
                 option_4()
